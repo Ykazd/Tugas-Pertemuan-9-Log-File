@@ -15,7 +15,7 @@ int main(){
     string output, input = "event_log_windows_1000.txt";        //deklarasi string
     string information = "Information";
     string warning = "Warning";
-    string error = "error";      
+    string error = "Error";      
     
     oFile.open("event_log_windows_information.txt");        //open file baru "event_log_windows_information.txt" untuk menyimpan baris yang ada tulisan "Information"
     output = sort(input, information);      //memanggil fungsi sort mencari kata "Information"
@@ -40,9 +40,9 @@ string sort(string filename, string str){
     string temp, output;
 
     iFile.open(filename, ios::in);       //open file "event_log_windows_1000.txt" sebagai input file
-    while(!iFile.eof()){        //saat input file belum mencapai end of line:
+    while(!iFile.eof()){        //saat input file belum mencapai end of line (eof):
         getline(iFile, temp);       //mendapatkan sebaris line dari input file dan menyimpan baris tersebut ke dalam variabel temp
-        if(temp.find(str) != string::npos){     //iki aku rareti awkawkwakwk seng penteng nggo nemokke kata "Information/Warning/Error"
+        if(temp.find(str) == 0){         //jika ditemukan kata "Information/Warning/Error" di index 0:
             output.append("\n" + temp);     //memperbarui variabel temp jika menemukan kata "Information/Warning/Error"
         }
         else{           //jika tidak menemukan kata "Information/Warning/Error" maka akan skip baris
