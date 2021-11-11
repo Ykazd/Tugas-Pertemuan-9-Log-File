@@ -1,7 +1,3 @@
-/*
-Ini program sorting dari input file txt menggunakan sort linear
-*/
-
 #include <iostream>
 #include <fstream>
 #include <string>
