@@ -4,7 +4,7 @@
 
 using namespace std;
 
-string sort(string filename, string str);       //prototipe fungsi sort
+string sort(string filename, string keyword);       //prototipe fungsi sort
 
 int main(){
     ofstream oFile;     //deklarasi output file
